@@ -65,6 +65,37 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Markdown Preview
+keymap("n", "<leader>m", ":MarkdownPreviewToggle<cr>", opts)
+
 -- Nvimtree
 keymap("n", "<F3>", ":NvimTreeToggle<cr>", opts)
+
+-- LSP
 keymap("n", "<leader>rf", ":Format<cr>", opts)
+keymap("n", "<leader>fD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "<leader>sl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
+
+-- Fzf Lua
+keymap('n', '<c-P>', "<cmd>FzfLua files<CR>", opts)
+keymap("n", "<leader>fu", "<cmd>FzfLua lsp_references<cr>", opts)
+keymap('n', '<leader>ff', "<cmd>FzfLua files<CR>", opts)
+keymap('n', '<leader>fg', "<cmd>FzfLua live_grep<CR>", opts)
+keymap('n', '<leader>fh', "<cmd>FzfLua help_tags<CR>", opts)
+
+-- Trouble
+keymap("n", "<leader>t", ":TroubleToggle<cr>", opts)
+
+-- Dap
+keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+

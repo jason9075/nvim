@@ -42,12 +42,19 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-    use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+        ft = { 'markdown' }
+    }
     use "joshdick/onedark.vim" -- color scheme
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "numToStr/Comment.nvim" -- Easily comment stuff
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
+    use "lukas-reineke/indent-blankline.nvim"
+    use "folke/which-key.nvim"
+    use "akinsho/toggleterm.nvim"
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -58,6 +65,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
     use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye" -- close buffer command when you use bufferline
     use "nvim-lualine/lualine.nvim"
     -- snippets
     use "L3MON4D3/LuaSnip" --snippet engine
@@ -67,6 +75,7 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    use  "folke/trouble.nvim" -- show diagnostics, references, telescope results
 
     -- fuzzy find
     use {
@@ -85,6 +94,12 @@ return packer.startup(function(use)
 
     -- git
     use "lewis6991/gitsigns.nvim"
+
+    -- DAP
+    use "mfussenegger/nvim-dap"
+    use "mfussenegger/nvim-dap-python"
+    use "theHamsta/nvim-dap-virtual-text"
+    use "rcarriga/nvim-dap-ui"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

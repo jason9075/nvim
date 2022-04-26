@@ -1,11 +1,13 @@
 return {
-	settings = {
-
+  settings = {
     python = {
       analysis = {
-        typeCheckingMode = "off"
+        typeCheckingMode = "basic";
+        autoSrarchPath = true;
+        useLibraryCodeForTypes = true;
+        autoImportCompletions = true;
       }
     }
-	},
+  },
 }
 

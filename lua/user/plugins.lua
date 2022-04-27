@@ -55,6 +55,7 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use "folke/which-key.nvim"
     use "akinsho/toggleterm.nvim"
+    use "SmiteshP/nvim-gps"
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin

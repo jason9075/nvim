@@ -102,3 +102,11 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Refacror
+keymap("v", "<leader>rm", [[<Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], opts)
+keymap("v", "<leader>rv", [[<Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], opts)
+keymap("v", "<leader>ri", [[<Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], opts)
+
+keymap("n", "<leader>ri", [[<Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], opts)
+

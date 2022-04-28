@@ -141,6 +141,7 @@ local mappings = {
         name = "Refactor",
         f = { "<cmd>Format<cr>", "Format" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+        i = { "<Cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable" },
     },
 
     f = {
@@ -183,6 +184,12 @@ local vopts = {
 }
 local vmappings = {
     ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
+    r = {
+        name = "Refactor",
+        m = { "<Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>", "Extract Method" },
+        v = { "<Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>", "Extract Variable" },
+        i = { "<Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable" },
+    }
 }
 
 which_key.setup(setup)

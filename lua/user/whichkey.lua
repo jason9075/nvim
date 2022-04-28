@@ -85,7 +85,7 @@ local mappings = {
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-    ["t"] = { "<cmd>Trouble<CR>", "Trouble" },
+    ["t"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
     ["m"] = { ":MarkdownPreviewToggle<cr>", "Markdown Preview" },
 
     p = {
@@ -139,15 +139,15 @@ local mappings = {
 
     r = {
         name = "Refactor",
-        f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+        f = { "<cmd>Format<cr>", "Format" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     },
 
     f = {
         name = "Find",
-        d = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
-        D = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
-        u = { "<cmd>Trouble lsp_references<CR>", "References" },
+        D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
+        d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+        u = { "<cmd>FzfLua lsp_references<cr>", "References" },
         f = { "<cmd>FzfLua files<CR>", "Files" },
         g = { "<cmd>FzfLua live_grep<CR>", "Live Grep" },
         h = { "<cmd>FzfLua help_tags<CR>", "Help Tags" }

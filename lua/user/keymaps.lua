@@ -34,8 +34,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
---keymap("n", "<S-l>", ":bnext<CR>", opts)
---keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -72,7 +72,7 @@ keymap("n", "<leader>m", ":MarkdownPreviewToggle<cr>", opts)
 keymap("n", "<F3>", ":NvimTreeToggle<cr>", opts)
 
 -- LSP
-keymap("n", "<leader>rf", ":Format<cr>", opts)
+keymap("n", "<leader>rf", "<cmd>Format<cr>", opts)
 keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 keymap("n", "<leader>fD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -90,7 +90,7 @@ keymap('n', '<leader>gb', "<cmd>FzfLua git_branches<cr>", opts)
 keymap('n', '<leader>gc', "<cmd>FzfLua git_commits<cr>", opts)
 
 -- Trouble
-keymap("n", "<leader>t", ":TroubleToggle<cr>", opts)
+keymap("n", "<leader>t", "<cmd>TroubleToggle<cr>", opts)
 
 -- Dap
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)

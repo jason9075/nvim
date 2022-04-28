@@ -73,6 +73,7 @@ keymap("n", "<F3>", ":NvimTreeToggle<cr>", opts)
 
 -- LSP
 keymap("n", "<leader>rf", ":Format<cr>", opts)
+keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 keymap("n", "<leader>fD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -84,6 +85,9 @@ keymap("n", "<leader>fu", "<cmd>FzfLua lsp_references<cr>", opts)
 keymap('n', '<leader>ff', "<cmd>FzfLua files<CR>", opts)
 keymap('n', '<leader>fg', "<cmd>FzfLua live_grep<CR>", opts)
 keymap('n', '<leader>fh', "<cmd>FzfLua help_tags<CR>", opts)
+keymap('n', '<leader>go', "<cmd>Telescope git_status<cr>", opts)
+keymap('n', '<leader>gb', "<cmd>Telescope git_branches<cr>", opts)
+keymap('n', '<leader>gc', "<cmd>Telescope git_commits<cr>", opts)
 
 -- Trouble
 keymap("n", "<leader>t", ":TroubleToggle<cr>", opts)

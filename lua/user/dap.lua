@@ -13,14 +13,16 @@ if vim.fn.has("python3") == 1 then
     -- Reference: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#Python
     local python_path = function ()
         local cwd = vim.fn.getcwd()
-        if vim.fn.executable(os.getenv("CONDA_PREFIX") .. '/bin/python') == 1 then
+        if os.getenv("CONDA_PREFIX") ~= nil then
             return os.getenv("CONDA_PREFIX") .. '/bin/python'
+        elseif os.getenv("CONDA_PYTHON_EXE") ~= nil then
+            return os.getenv("CONDA_PYTHON_EXE")
         elseif vim.fn.executable(cwd .. '/venv/bin/python') == 1 then
             return cwd .. '/venv/bin/python'
         elseif vim.fn.executable(cwd .. '/.venv/bin/python') == 1 then
             return cwd .. '/.venv/bin/python'
         else
-            return '/usr/bin/python'
+            return '/usr/bin/python3'
         end
     end
 
@@ -43,6 +45,8 @@ if vim.fn.has("python3") == 1 then
             pythonPath = python_path;
         },
     }
+    
+    vim.g.python3_host_prog = python_path()
 end
 
 dapui.setup {

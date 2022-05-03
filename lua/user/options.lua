@@ -47,4 +47,4 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_node_provider = 0
 
 -- no sure need it or not...
-vim.g.python3_host_prog = "$CONDA_PREFIX/bin/python"
+-- vim.g.python3_host_prog = "$CONDA_PREFIX/bin/python"

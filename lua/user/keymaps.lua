@@ -110,3 +110,5 @@ keymap("v", "<leader>ri", [[<Esc><Cmd>lua require('refactoring').refactor('Inlin
 
 keymap("n", "<leader>ri", [[<Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], opts)
 
+-- Copilot
+keymap("i", "<Right>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

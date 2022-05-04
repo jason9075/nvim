@@ -56,6 +56,9 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"
     use "akinsho/toggleterm.nvim"
     use "SmiteshP/nvim-gps"
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye" -- close buffer command when you use bufferline
+    use "nvim-lualine/lualine.nvim"
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -65,9 +68,6 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
-    use "akinsho/bufferline.nvim"
-    use "moll/vim-bbye" -- close buffer command when you use bufferline
-    use "nvim-lualine/lualine.nvim"
     use "github/copilot.vim"
 
     -- snippets

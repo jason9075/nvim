@@ -77,7 +77,7 @@ keymap("n", "<leader>rr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 keymap("n", "<leader>fD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "<leader>fd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-keymap("n", "<leader>sl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
+keymap("n", "<leader>sl", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 -- Fzf Lua
 keymap('n', '<c-P>', "<cmd>FzfLua files<CR>", opts)

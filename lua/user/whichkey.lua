@@ -157,7 +157,7 @@ local mappings = {
     s = {
         name = "Show Info",
         h = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Hover" },
-        l = { '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', "Line Diagnostic" },
+        l = { '<cmd>lua vim.diagnostic.open_float()<CR>', "Line Diagnostic" },
     },
 
     d = {

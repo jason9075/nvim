@@ -100,9 +100,10 @@ return packer.startup(function(use)
 
     -- DAP
     use "mfussenegger/nvim-dap"
-    use "mfussenegger/nvim-dap-python"
     use "theHamsta/nvim-dap-virtual-text"
     use "rcarriga/nvim-dap-ui"
+    use "mfussenegger/nvim-dap-python"
+    use 'leoluz/nvim-dap-go'
 
     -- Refactor
     use "ThePrimeagen/refactoring.nvim"

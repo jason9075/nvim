@@ -16,6 +16,7 @@ null_ls.setup {
         -- formatting.yapf,
         -- formatting.stylua,
         diagnostics.flake8,
+        diagnostics.staticcheck,
     },
     on_attach = function(client)
         if client.resolved_capabilities.document_formatting then

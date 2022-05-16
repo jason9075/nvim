@@ -1,3 +1,10 @@
+# 🚨 Deprecated!!!
+I use neoVim now
+```
+https://github.com/jason9075/dotfiles
+```
+---
+
 # My NeoVim Setup
 
 Install
